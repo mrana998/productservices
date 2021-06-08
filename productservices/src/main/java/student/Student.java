@@ -5,6 +5,7 @@ public class Student {
 	private String name;
 	private int gpa;
 	private int cool;
+	private int new;
 	
 	public String getName() {
 		return name;
