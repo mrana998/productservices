@@ -4,7 +4,7 @@ public class Student {
 	
 	private String name;
 	private int gpa;
-	
+	private int cool;
 	
 	public String getName() {
 		return name;
