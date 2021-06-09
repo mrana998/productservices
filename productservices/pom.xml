@@ -8,6 +8,12 @@
 	<version>0.0.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version>
+		<relativePath />
+	</parent>
 	<name>productservices</name>
 	<url>http://maven.apache.org</url>
 
@@ -50,7 +56,7 @@
 	</dependencies>
 
 	<build>
-	
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -61,41 +67,41 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
-			
-			 <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <addClasspath>true</addClasspath>
-                        <classpathPrefix>lib/</classpathPrefix>
-                        <mainClass>fully.qualified.MainClass</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-        </plugin>
 
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-                <execution>
-                    <phase>install</phase>
-                    <goals>
-                        <goal>copy-dependencies</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                        <!-- optional -->
-                        <!-- exclude copying test and provided dependencies -->
-                        <includeScope>runtime</includeScope>
-                        <excludeScope>provided</excludeScope>
-                        <!-- optional -->
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>fully.qualified.MainClass</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+							<!-- optional -->
+							<!-- exclude copying test and provided dependencies -->
+							<includeScope>runtime</includeScope>
+							<excludeScope>provided</excludeScope>
+							<!-- optional -->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
