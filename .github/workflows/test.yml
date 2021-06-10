@@ -12,8 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: java version
-      run: java --version
+    
         
     - uses: actions/checkout@v2
     - name: Set up JDK 8
@@ -21,6 +20,9 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
+        
+    - name: java version
+      run: java --version
         
  
         
