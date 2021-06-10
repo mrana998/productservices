@@ -22,7 +22,7 @@ jobs:
         distribution: 'adopt'
         
     - name: java version
-      run: java --version
+      run: javac --version
         
  
         
