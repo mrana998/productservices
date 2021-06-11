@@ -20,13 +20,12 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
+    - run: java -cp java StudentTest
         
     - name: java version
       run: javac -version
       
-    - name: JUnit Report Action
-      uses: mikepenz/action-junit-report@v2.4.2
- 
+
       
         
  
