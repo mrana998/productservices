@@ -20,7 +20,11 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-    - run: java -cp java productservices/productservices/src/test/java/student/StudentTest
+    - run: java -cp java
+    
+    - name: run pom
+      working-directory: github-actions-java-maven
+      run: mvn -B pom.xml compile
         
     - name: java version
       run: javac -version
