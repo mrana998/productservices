@@ -22,7 +22,7 @@ jobs:
         distribution: 'adopt'
   
     - name: run pom
-      run: mvn -B pom.xml compile
+      run: mvn -f path/to/pom.xml compile
         
     - name: java version
       run: javac -version
