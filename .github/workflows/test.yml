@@ -22,7 +22,6 @@ jobs:
         distribution: 'adopt'
   
     - name: run pom
-      working-directory: github-actions-java-maven
       run: mvn -B pom.xml compile
         
     - name: java version
