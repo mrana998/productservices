@@ -25,7 +25,13 @@ jobs:
       run: pwd
       
       
-    - name: Change Directory
+    - name: ls
+      run: ls
+      
+    - name: cd
+      run: cd productservices
+      
+    - name: ls
       run: ls
       
     - name: Run Pom
