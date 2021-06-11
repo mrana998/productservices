@@ -20,22 +20,9 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-  
-    - name: current directory 
-      run: pwd
-      
-      
-    - name: ls
-      run: ls
-      
-    - name: cd
-      run: cd productservices
-      
-    - name: ls
-      run: ls
-      
+
     - name: Run Pom
-      run: mvn -B pom.xml compile
+      run: mvn -B package
     
         
     - name: java version
