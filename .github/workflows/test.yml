@@ -21,8 +21,16 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
   
-    - name: run pom
-      run: mvn -f path/to/pom.xml 
+    - name: current directory 
+      run: pwd
+      
+      
+    - name: Change Directory
+      run: cd ../productservices/productservices/pom
+      
+    - name: Run Pom
+      run: mvn -B pom.xml compile
+    
         
     - name: java version
       run: javac -version
