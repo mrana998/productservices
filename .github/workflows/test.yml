@@ -21,12 +21,14 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
 
-    - name: Run Pom
-      run: mvn -B package
-    
-        
-    - name: java version
-      run: javac -version
+    - name: Cache Maven packages
+      uses: actions/cache@v2
+      with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+    - name: Run tests with Maven
+      run: mvn -B test --file pom.xml
       
 
       
