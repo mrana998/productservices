@@ -22,7 +22,7 @@ jobs:
         distribution: 'adopt'
 
  
-    - name: Run tests with Maven
+    - name: Runs tests with Maven
       run: mvn -B test -f pom.xml
       
 
