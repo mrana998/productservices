@@ -23,7 +23,7 @@ jobs:
 
  
     - name: Runs tests with Maven
-      run: mvn -B verify --file folder/pom.xml
+      run: mvn -B verify --file productservices/pom.xml
       
 
       
